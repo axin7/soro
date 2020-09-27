@@ -1,0 +1,28 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+rasa = "*"
+mitie = "*"
+jieba = "*"
+rasa-sdk = "*"
+requests = "*"
+parse = "*"
+peewee = "*"
+pyaudio = "*"
+flashtext = "*"
+pypinyin = "*"
+pycorrector = "*"
+kenlm = {file = "https://github.com/kpu/kenlm/archive/master.zip"}
+tqdm = "*"
+rich = "*"
+emoji = "*"
+helium = "*"
+requests-html = "*"
+
+[requires]
+python_version = "3.7"

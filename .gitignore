@@ -1,0 +1,6 @@
+__pycache__/
+process/__pycache__/
+process/config1.py
+tests/
+test.py
+data/total_word_feature_extractor_zh.dat

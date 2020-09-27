@@ -1,0 +1,26 @@
+# Configuration for Rasa NLU.
+# https://rasa.com/docs/rasa/nlu/components/
+language: "zh"
+
+pipeline:
+- name: "nlp_mitie"
+  model: "data/total_word_feature_extractor_zh.dat"
+- name: "tokenizer_jieba"
+  default_dict: "./default_dict.big"
+  user_dicts: "./jieba_userdict"
+# you can put in file path or directory path as the "user_dicts" value
+#  user_dicts: "./jieba_userdict/jieba_userdict.txt"
+- name: "CRFEntityExtractor"
+- name: "intent_featurizer_mitie"
+- name: "intent_classifier_sklearn"
+- name: "ResponseSelector"
+- name: "process.extractor.AppExtractor"
+
+# Configuration for Rasa Core.
+# https://rasa.com/docs/rasa/core/policies/
+policies:
+  - name: MemoizationPolicy
+  - name: TEDPolicy
+    max_history: 5
+    epochs: 100
+  - name: MappingPolicy

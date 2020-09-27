@@ -1,0 +1,40 @@
+intents:
+  - chitchat
+  - open
+  - close
+  - open_browser
+  - close_browser
+  - refresh_browser
+  - open_web
+  - click
+  - write
+
+actions:
+  - respond_chitchat
+  - action_open_app
+  - action_close_app
+  - action_open_browser
+  - action_close_browser
+  - action_refresh_browser
+  - action_open_web
+  - action_click
+  - action_write
+
+entities:
+  - app_name
+  - web_name
+  - url
+  - element_name
+  - keyword
+
+slots:
+  app_name:
+    type: unfeaturized
+  web_name:
+    type: unfeaturized
+  url:
+    type: unfeaturized
+  element_name:
+    type: unfeaturized
+  keyword:
+    type: unfeaturized
