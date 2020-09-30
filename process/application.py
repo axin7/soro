@@ -40,8 +40,8 @@ def user_app_list(path=Path('/Applications')):
                 try:
                     with open(file, 'rb') as f:
                         content = f.read().decode('utf-16').splitlines()
-                        p = compile('"CFBundleDisplayName" = "{name}";')
                         for r in content:
+                            p = compile('"CFBundleDisplayName" = "{name}";')
                             result = p.parse(r)
                             if result:
                                 tag = result["name"]
