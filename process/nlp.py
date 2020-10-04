@@ -36,6 +36,7 @@ def nlp(query,message_id='123',sender='user'):
     intent_name = core_message_res["latest_message"]["intent"]["name"]
     intent_confidence = core_message_res["latest_message"]["intent"]["confidence"]
 
+    # 当意图为QA类时
     if intent_name in ['chitchat']:
         if intent_confidence  > VALUE_QA_UNKNOW :
             response = core_message_res["latest_message"]["response_selector"]["default"]["response"]["name"]
@@ -44,6 +45,7 @@ def nlp(query,message_id='123',sender='user'):
         else:
             return MESSAGE_UNKNOW
 
+    # 当意图为空时
     elif not intent_name:
         return MESSAGE_UNKNOW
 
