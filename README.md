@@ -6,11 +6,13 @@ Soro 是一款 Mac 端的智能助手。
 
 可通过语音控制电脑，对系统和应用进行操作。
 
-
+[**完整文档**](https://www.yuque.com/axin/soro/wvbiw1)
 
 ![img](./img.gif)
 
 
+
+![diagram](./diagram.png)
 
 
 
@@ -35,7 +37,7 @@ Soro 是一款 Mac 端的智能助手。
 1. 下载仓库到本地： `git clone https://github.com/axin7/soro.git`
 2. 下载[词向量模型文件](https://www.yun.cn/s/99ab5d78827b4e8ba84f4c78b9039b99)放置到 `/data` 目录下
 3. 安装相关依赖： `pipenv install`
-4. 在 `process/config.py` 中设置百度语音识别参数
+4. 在 `process/config.py` 中设置百度语音识别参数(短语音识别极速版)
 
 > kenlm 安装失败使用该方法：`pip install https://github.com/kpu/kenlm/archive/master.zip`
 
@@ -78,4 +80,5 @@ Soro 是一款 Mac 端的智能助手。
 - [ ] 更多复杂任务对话
 - [ ] 远程控制电脑(钉钉、企业微信）
   - [ ] 通信管道
-  - [ ] 支持所有操作
+  - [ ] 支持所有本地操作
+- [ ] 存储对话记录至数据库
